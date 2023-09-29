@@ -1,8 +1,8 @@
-\name{explore.plot}
-\alias{explore.plot}
+\name{explore_plot}
+\alias{explore_plot}
 \title{Graphical exploratory data analysis}
 \description{Plots the kernel density estimations of the biomarker distributions on positive and negative individuals.}
-\usage{explore.plot(marker, status, observed.time, left, right, time)}
+\usage{explore_plot(marker, status, observed.time, left, right, time)}
 \arguments{
   \item{marker}{ vector with the biomarker values.}
 
@@ -24,11 +24,11 @@
 }
 
 \seealso{
-\code{\link{explore}}
+\code{explore_table}
 }
 \examples{
 data(diabet)
-explore.plot(marker=diabet$stab.glu, status=diabet$diab)
+explore_plot(marker=diabet$stab.glu, status=diabet$diab)
 }
 
 

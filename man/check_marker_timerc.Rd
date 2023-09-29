@@ -1,11 +1,11 @@
-\name{check.marker.timerc-internal}
-\alias{check.marker.timerc}
+\name{check_marker_timerc-internal}
+\alias{check_marker_timerc}
 \title{Check of prognosis scenarios under right censorship}
 \description{
 Checks the consistency of the parameters entered for prognosis scenarios under right censorship.
 }
 \usage{
-check.marker.timerc(marker, status, observed.time, time, probs, sd.probs)
+check_marker_timerc(marker, status, observed.time, time, probs, sd.probs)
 }
 
 \arguments{
@@ -31,6 +31,6 @@ check.marker.timerc(marker, status, observed.time, time, probs, sd.probs)
 }
 
 \seealso{
-\code{\link{check.marker.binout}}, \code{\link{check.marker.timeic}}
+\code{check_marker_binout} and \code{check_marker_timeic}
 }
 

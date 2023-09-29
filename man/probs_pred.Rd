@@ -1,9 +1,9 @@
-\name{probs.pred}
-\alias{probs.pred}
+\name{probs_pred}
+\alias{probs_pred}
 \title{Plot of the predictive model}
 \description{This function plots the predicted probabilities for each marker value computed through the predictive model together, with 95\% pointwise confidence intervals.
 }
-\usage{probs.pred(sMS, var, nboots, parallel, ncpus)
+\usage{probs_pred(sMS, var, nboots, parallel, ncpus)
 }
 
 \arguments{
@@ -28,16 +28,17 @@ The variance of the probability estimates, obtained by the predictive model, is 
 \item{probs }{predicted probabilities (y-axis coordinates).}
 \item{sd.probs }{estimates of the standard deviation of the predicted probabilities.}
 }
-\seealso{
-\code{\link{pred.model.binout}}, \code{\link{pred.model.timerc}} and \code{\link{pred.model.timeic}}
+\seealso{\code{pred_model_binout}, \code{pred_model_timerc} and \code{pred_model_timeic}
 }
 \examples{
-library(RISCA)
-data("dataKTFS")
-roc <- sMSROC(marker = dataKTFS$score, status = dataKTFS$failure,
-                       observed.time = dataKTFS$time,
-                       time = 5, meth = "S")
-probs <- probs.pred(sMS = roc)
+data(ktfs)
+DT <- ktfs
+roc <- sMSROC(marker = DT$score,
+              status = DT$failure,
+              observed.time = DT$time,
+              time = 5,
+              meth = "S")
+probs <- probs_pred(sMS = roc)
 probs$plot
 }
 

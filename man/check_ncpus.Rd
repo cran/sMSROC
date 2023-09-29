@@ -1,8 +1,8 @@
-\name{check.ncpus-internal}
-\alias{check.ncpus}
+\name{check_ncpus-internal}
+\alias{check_ncpus}
 \title{Check number of CPUs}
 \description{Checks the number of CPUs to be used when parallel computing is performed. The default value is 1 and the maximum is 2.}
-\usage{check.ncpus(ncpus)}
+\usage{check_ncpus(ncpus)}
 \arguments{
   \item{ncpus}{ number of CPUs to be used when performing parallel computing.}
 }

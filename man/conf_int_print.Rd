@@ -1,10 +1,10 @@
-\name{conf.int.print}
-\alias{conf.int.print}
+\name{conf_int_print}
+\alias{conf_int_print}
 \title{AUC and confidence intervals
 }
 \description{Prints the AUC estimate value and its confidence intervals computed by the \code{\link{sMSROC}} function.
 }
-\usage{conf.int.print(sMS)
+\usage{conf_int_print(sMS)
 }
 \arguments{
   \item{sMS}{object of class \code{sMS} returned by the function \code{\link{sMSROC}}.
@@ -15,10 +15,10 @@
 \value{Printed string in the console containing the AUC, its confidence intervals and the confidence level at which they were computed.
 }
 \seealso{
-\code{\link{sMSROC}}
+\code{sMSROC}
 }
 \examples{
 data(diabet)
 roc <- sMSROC(marker=diabet$stab.glu, status=diabet$glyhb, conf.int="T")
-conf.int.print(roc)
+conf_int_print(roc)
 }

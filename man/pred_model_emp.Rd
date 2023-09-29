@@ -1,8 +1,8 @@
-\name{pred.model.emp-internal}
-\alias{pred.model.emp}
+\name{pred_model_emp-internal}
+\alias{pred_model_emp}
 \title{Predictive model (naive estimation) }
 \description{Naive estimation of the predictive model.}
-\usage{pred.model.emp(marker, status)}
+\usage{pred_model_emp(marker, status)}
 \arguments{
  \item{marker}{vector with the biomarker values.
  }
@@ -20,5 +20,5 @@
 }
 }
 \seealso{
-\code{sMS.binout} \code{sMS.timerc} \code{sMS.timeic} and \code{sMSROC}
+\code{sMS_binout}, \code{sMS_timerc}, \code{sMS_timeic} and \code{sMSROC}
 }

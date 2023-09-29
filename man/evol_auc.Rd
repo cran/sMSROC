@@ -1,12 +1,12 @@
-\name{evol.auc}
-\alias{evol.auc}
+\name{evol_auc}
+\alias{evol_auc}
 \title{Evolution of the AUCs
 }
 \description{
 Plots, in prognosis scenarios, the areas under the ROC curves computed by the sMSROC estimator for a sequence of times.
 }
-\usage{evol.auc(marker, status, observed.time, left, right,
-                time = 1, meth = c("L", "S", "E"), grid = 500)
+\usage{evol_auc(marker, status, observed.time, left, right,
+         time = 1, meth = c("L", "S", "E"), grid = 500)
 }
 \arguments{
   \item{marker}{ vector with the biomarker values.
@@ -44,15 +44,16 @@ This function calls the {\code{\link{sMSROC}}} function at each of the times ind
 }
 
 \seealso{
-\code{\link{sMSROC}}
+\code{sMSROC}
 }
 \examples{
 # Example of the use of the evol.AUC function
-library(RISCA)
-data(dataKTFS)
-DT = dataKTFS
-aucs <- evol.auc(marker = DT$score, status = DT$failure,
-                observed.time = DT$time,
-                time = seq(2:3), meth = "E")
+data(ktfs)
+DT = ktfs
+aucs <- evol_auc(marker = DT$score,
+                 status = DT$failure,
+                 observed.time = DT$time,
+                 time = seq(2:3),
+                 meth = "E")
 aucs$evol.auc
 }

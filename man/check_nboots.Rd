@@ -1,8 +1,8 @@
-\name{check.nboots-internal}
-\alias{check.nboots}
+\name{check_nboots-internal}
+\alias{check_nboots}
 \title{Check number of bootstrap samples}
 \description{This function checks if the value entered as number of bootstrap samples is correct.}
-\usage{check.nboots(nboots)}
+\usage{check_nboots(nboots)}
 \arguments{
   \item{nboots}{ number of bootstrap samples to be run. The default value is 500.}
 }

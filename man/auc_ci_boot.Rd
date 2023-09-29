@@ -1,11 +1,11 @@
-\name{auc.ci.boot-internal}
-\alias{auc.ci.boot
+\name{auc_ci_boot-internal}
+\alias{auc_ci_boot
 }
 \title{Confidence intervals for the AUC (bootstrap)
 }
 \description{Computation of confidence intervals for the AUC based on Bootstrap Percentile.
 }
-\usage{auc.ci.boot(marker, outcome, status, observed.time, left, right, time,
+\usage{auc_ci_boot(marker, outcome, status, observed.time, left, right, time,
                     data_type, meth, grid, probs, ci.cl, ci.nboots, parallel,
                     ncpus, all)
 }

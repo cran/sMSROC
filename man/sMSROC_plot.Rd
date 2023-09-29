@@ -1,11 +1,11 @@
-\name{sMSROC.plot}
-\alias{sMSROC.plot}
+\name{sMSROC_plot}
+\alias{sMSROC_plot}
 \title{Plot of the sMS ROC curve estimate
 }
 \description{Provides informative plots of the sMS ROC curve estimates.
 }
 \usage{
-sMSROC.plot(sMS, m.value)
+sMSROC_plot(sMS, m.value)
 }
 \arguments{
   \item{sMS}{object of class \code{sMS} returned from function \code{\link{sMSROC}}.
@@ -24,23 +24,23 @@ The function provides two types of graphics:
 }
 }
 \value{A list with the following elements:
-\item{\bold{basic.plot,}}{object that can be used and customized by the tools from the \code{link{plotROC  package.}}
+\item{basic.plot}{object that can be used and customized by the tools from the \code{\link{plotROC}}  package.
 }
-\item{\bold{roc.plot,}}{object of class  \code{ggplot}. Although it is already customized (title, colors, axis labels, ..., etc.) the end-users can make their own changes by adding the corresponding layers, with the available tools from the  \code{ggplot2} package.
+\item{roc.plot}{object of class  \code{ggplot}. Although it is already customized (title, colors, axis labels, ..., etc.) the end-users can make their own changes by adding the corresponding layers, with the available tools from the \code{ggplot2} package.
 }
 }
 \seealso{
-\code{\link{sMSROC}}
+\code{sMSROC}
 }
 \examples{
 #  Example of the use of the plot.sMSROC function
-library(sMSROC)
-library(RISCA)
-data(dataKTFS)
-DT = dataKTFS
-ROC <- sMSROC(marker = DT$score, status = DT$failure,
+data(ktfs)
+DT = ktfs
+ROC <- sMSROC(marker = DT$score,
+              status = DT$failure,
               observed.time = DT$time,
-              time = 5, meth = "S")
-plot <- sMSROC.plot(sMS = ROC, m.value = 4.2)
+              time = 5,
+              meth = "S")
+plot <- sMSROC_plot(sMS = ROC, m.value = 4.2)
 plot$basicplot; plot$rocplot
 }

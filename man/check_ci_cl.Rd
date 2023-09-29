@@ -1,8 +1,8 @@
-\name{check.ci.cl-internal}
-\alias{check.ci.cl}
+\name{check_ci_cl-internal}
+\alias{check_ci_cl}
 \title{Check confidence level for AUC's confidence intervals}
 \description{Checks the validity of the value entered as confidence level for computing the confidence intervals for the AUC.}
-\usage{check.ci.cl(ci.cl)}
+\usage{check_ci_cl(ci.cl)}
 \arguments{
   \item{ci.cl}{confidence level at which the confidence intervals for the AUC will be computed.}
 }

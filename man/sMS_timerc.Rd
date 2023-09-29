@@ -1,8 +1,8 @@
-\name{sMS.timerc}
-\alias{sMS.timerc}
+\name{sMS_timerc}
+\alias{sMS_timerc}
 \title{sMS estimator for prognostic biomarkers and right censorship}
 \description{Wrap function for computing the sMS estimator in prognosis scenarios under right censorship.}
-\usage{sMS.timerc(marker, status, observed.time, outcome, time, meth, grid, probs, all)}
+\usage{sMS_timerc(marker, status, observed.time, outcome, time, meth, grid, probs, all)}
 \arguments{
   \item{marker}{vector with the biomarker values.}
   \item{status}{numeric response vector.}
@@ -36,7 +36,7 @@
 \item{ROC}{ ROC curve approximated at each point of the vector \code{u}.}
 \item{auc}{ area under the weighted empirical ROC curve estimator.}
 \item{marker}{ vector with the ordered biomarker values.}
-\item{outcome}{ vector with the conditionof the individuals at time \code{time} as positive, negative or cenrored (unknown).}
+\item{outcome}{ vector with the condition of the individuals at time \code{time} as positive, negative or cenrored (unknown).}
 \item{probs}{ vector with the probabilities of the predictive model corresponding to each biomarker value.}
 }
 \seealso{

@@ -1,8 +1,8 @@
-\name{pred.model.timerc-internal}
-\alias{pred.model.timerc}
+\name{pred_model_timerc-internal}
+\alias{pred_model_timerc}
 \title{Predictive model in prognosis scenarios (II)}
 \description{Estimation of the predictive model in prognosis scenarios under right censorship.}
-\usage{pred.model.timerc(marker, status, observed.time, outcome, time, meth)}
+\usage{pred_model_timerc(marker, status, observed.time, outcome, time, meth)}
 \arguments{
 \item{marker}{vector with the biomarker values.}
 \item{status}{numeric response vector. The highest value is assumed to stand for the subjects having the event under study. The lowest value, for those who do not. Any other value will not be considered.
@@ -32,6 +32,6 @@
 }
 
 \seealso{
-\code{\link{sMS.timerc}} and \code{\link{sMSROC}}
+\code{sMS_timerc} and \code{sMSROC}
 }
 

@@ -1,11 +1,11 @@
-\name{check.type.outcome-internal}
-\alias{check.type.outcome}
+\name{check_type_outcome-internal}
+\alias{check_type_outcome}
 \title{Check the type of scenario (diagnosis/prognosis)
 }
 \description{
 Determines the type of scenario handled: diagnosis or prognosis, under right or interval censorship, according to the parameters entered by the user.
 }
-\usage{check.type.outcome(status, observed.time, left, right)}
+\usage{check_type_outcome(status, observed.time, left, right)}
 
 \arguments{
   \item{status}{numeric response vector. Only two values will be taken into account. The highest one is assumed to stand for the subjects having the event under study. The lowest value, for those who do not. Any other value will not be considered.}

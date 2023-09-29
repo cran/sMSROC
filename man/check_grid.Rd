@@ -1,8 +1,8 @@
-\name{check.grid-internal}
-\alias{check.grid}
+\name{check_grid-internal}
+\alias{check_grid}
 \title{Check grid}
 \description{Cheking of the parameter grid.}
-\usage{check.grid(grid)}
+\usage{check_grid(grid)}
 \arguments{
   \item{grid}{ grid size for computing the ROC curve estimate. The default value is 1000.}
 }

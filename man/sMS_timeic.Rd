@@ -1,8 +1,8 @@
-\name{sMS.timeic-internal}
-\alias{sMS.timeic}
+\name{sMS_timeic-internal}
+\alias{sMS_timeic}
 \title{sMS estimator for prognostic biomarkers and interval censoring}
 \description{Wrap function for computing the sMS estimator in prognosis scenarios under interval censorship.}
-\usage{sMS.timeic(marker, left, right, outcome, time, meth, grid, probs, all)}
+\usage{sMS_timeic(marker, left, right, outcome, time, meth, grid, probs, all)}
 \arguments{
   \item{marker}{vector with the biomarker values.}
    \item{left}{vector containing the lower edges of the observed intervals.}
@@ -39,5 +39,5 @@
 }
 \seealso{
 \code{pred.mod.emp}, \code{pred.mod.binout},
-\code{computeROC}, \code{sMS.binout}, \code{sMS.timerc}
+\code{computeROC}, \code{sMS.binout} and \code{sMS.timerc}
 }

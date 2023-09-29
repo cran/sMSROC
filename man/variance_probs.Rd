@@ -1,11 +1,11 @@
-\name{variance.probs-internal}
-\alias{variance.probs
+\name{variance_probs-internal}
+\alias{variance_probs
 }
 \title{Variance of the predictive model
 }
 \description{Estimation of the variance of the predictive model by bootstrap.
 }
-\usage{variance.probs(marker, outcome, status, observed.time, left, right, time,
+\usage{variance_probs(marker, outcome, status, observed.time, left, right, time,
                meth, data_type, grid, probs, ci.nboots, parallel, ncpus, all)
 }
 \arguments{

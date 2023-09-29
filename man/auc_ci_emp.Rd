@@ -1,12 +1,12 @@
-\name{auc.ci.empr-internal}
-\alias{auc.ci.empr
+\name{auc_ci_empr-internal}
+\alias{auc_ci_empr
 }
 \title{Confidence intervals for the AUC (empirical variance estimation)
 }
 \description{Computation of confidence intervals for the AUC by implementing the empirical
-procedure for estimating the variance of the AUC, as described in \doi{/10.1515/ijb-2019-0097}.
+procedure for estimating the variance of the AUC, as described in \doi{10.1515/ijb-2019-0097}.
 }
-\usage{auc.ci.empr(SE, SP, auc, probs, controls, cases, ci.cl)
+\usage{auc_ci_empr(SE, SP, auc, probs, controls, cases, ci.cl)
 }
 \arguments{
   \item{SE}{vector containing the values of the sensitivity returned from the \code{\link{sMSROC}} function.

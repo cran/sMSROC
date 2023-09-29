@@ -1,12 +1,12 @@
-\name{check.marker.timeic-internal}
-\alias{check.marker.timeic}
+\name{check_marke_timeic-internal}
+\alias{check_marker_timeic}
 \title{Check of prognosis scenarios under interval censorship
 }
 \description{
 Checks the consistency of the parameters entered for prognosis scenarios under interval censorship.
 }
 \usage{
-check.marker.timeic(marker, left, right, time, probs, sd.probs)
+check_marker_timeic(marker, left, right, time, probs, sd.probs)
 }
 \arguments{
   \item{marker}{ vector with the biomarker values. It is a mandatory parameter.}
@@ -30,5 +30,5 @@ check.marker.timeic(marker, left, right, time, probs, sd.probs)
 }
 
 \seealso{
-\code{\link{check.marker.binout}}, \code{\link{check.marker.timerc}}
+\code{check_marker_binout} and \code{check_marker_timerc}
 }

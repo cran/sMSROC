@@ -1,10 +1,10 @@
-\name{check.marker.binout-internal}
-\alias{check.marker.binout}
+\name{check_marker_binout-internal}
+\alias{check_marker_binout}
 \title{Checks of diagnosis scenarios}
 \description{
 Checks the consistency of the parameters entered for diagnosis scenarios.}
 \usage{
-check.marker.binout(marker, status, probs, sd.probs)
+check_marker_binout(marker, status, probs, sd.probs)
 }
 \arguments{
   \item{marker}{ vector with the biomarker values. It is a mandatory parameter.
@@ -27,5 +27,5 @@ check.marker.binout(marker, status, probs, sd.probs)
 }
 
 \seealso{
-\code{\link{check.marker.timerc}}, \code{\link{check.marker.timeic}}
+\code{check_marker_timerc} and \code{check_marker_timeic}
 }

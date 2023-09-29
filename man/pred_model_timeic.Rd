@@ -1,12 +1,12 @@
-\name{pred.model.timeic-internal
+\name{pred_model_timeic-internal
 }
-\alias{pred.model.timeic
+\alias{pred_model_timeic
 }
 \title{Predictive model in prognosis scenarios (I)
 }
 \description{Estimation of the predictive model in prognosis scenarios under interval censorship.
 }
-\usage{pred.model.timeic(marker, left, right, outcome, time, meth)
+\usage{pred_model_timeic(marker, left, right, outcome, time, meth)
 }
 \arguments{
 \item{marker}{vector with the biomarker values.
@@ -28,11 +28,12 @@
 }
 \details{
 \itemize{
-\item{If \code{meth} = \bold{``L''}, the event times are assumed to come from a Cox proportional hazards regression model and the predictive model is estimated as indicated in \doi{/10.1080/00949655.2020.1736071}:
+\item{If \code{meth} = \bold{``L''}, the event times are assumed to come from a Cox proportional hazards regression model and the predictive model is estimated as indicated in
+\doi{10.1080/00949655.2020.1736071}.
  \deqn{ P (T \leq t \;|\; X=x) = \frac{S(U|x) - S(t|x) }{S(U|x) - S(V|x)},} where \eqn{U = \min{\{t, L\}}} and \eqn{V = \max {\{t, R\}}}, being L and R the random variables that stand for the edges of the observable interval containing the event time.
 }
 
-\item{If \code{meth} = \bold{``S''}, the approximation is done by \deqn{P (T\leq t \;|\; X=x) = 1 - S(t|x),} being \eqn{S(\cdot)} the survival function at time \bold{t} given the marker value, estimated through a proportional hazard model for interval censored data according to \doi{/10.2307/2530698}.
+\item{If \code{meth} = \bold{``S''}, the approximation is done by \deqn{P (T\leq t \;|\; X=x) = 1 - S(t|x),} being \eqn{S(\cdot)} the survival function at time \bold{t} given the marker value, estimated through a proportional hazard model for interval censored data according to \doi{10.2307/2530698}.
 }
 }
 }
@@ -48,7 +49,7 @@
  }
 
 \seealso{
-\code{\link{sMS.timeic}} and \code{\link{sMSROC}}
+\code{sMS_timeic} and \code{sMSROC}
 }
 
 

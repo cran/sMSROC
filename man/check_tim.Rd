@@ -1,8 +1,8 @@
-\name{check.time-internal}
-\alias{check.time}
-\title{Check time}
+\name{check_tim-internal}
+\alias{check_tim}
+\title{Check tim}
 \description{Cheking of the parameter time.}
-\usage{check.time(time)}
+\usage{check_tim(time)}
 \arguments{
   \item{time}{ point of time at which the ROC curve estimate in prognosis scenarios will be computed. It is mandatory in this scenario.}
 }

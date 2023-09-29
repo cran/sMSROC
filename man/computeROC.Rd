@@ -1,10 +1,10 @@
-\name{compute.ROC-internal}
-\alias{compute.ROC}
+\name{compute_ROC-internal}
+\alias{compute_ROC}
 \title{Weighted empirical ROC curve estimator
 }
 \description{Computes the weighted empirical ROC curve estimator associated to the input biomarker.
 }
-\usage{compute.ROC(marker, probs, grid)}
+\usage{compute_ROC(marker, probs, grid)}
 \arguments{
   \item{marker}{vector with the biomarker values.}
   \item{probs}{vector containing the probabilities corresponding to the predictive model.}
@@ -22,5 +22,5 @@
 \item{probs}{ vector with the probabilities of the predictive model corresponding to each biomarker value.}
 }
 \seealso{
-\code{sMSbinout}, \code{sMStimerc}, \code{sMStimeic}
+\code{sMSbinout}, \code{sMStimerc} and \code{sMStimeic}
 }

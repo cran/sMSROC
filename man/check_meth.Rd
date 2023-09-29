@@ -1,8 +1,8 @@
-\name{check.meth-internal}
-\alias{check.meth}
+\name{check_meth-internal}
+\alias{check_meth}
 \title{Check the method for estimating the predictive model}
 \description{When the predictive model is entered manually by the user, this function ensures that no other method by default is used to compute it.}
-\usage{check.meth(meth, probs)}
+\usage{check_meth(meth, probs)}
 \arguments{
   \item{meth}{ method for approximating the predictive model \eqn{P (D | X=x)}.}
   \item{probs}{ vector containing the probabilities corresponding to the predictive model when it is entered manually by the user.}

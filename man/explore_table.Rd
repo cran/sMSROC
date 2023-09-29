@@ -1,8 +1,8 @@
-\name{explore}
-\alias{explore}
+\name{explore_table}
+\alias{explore_table}
 \title{Exploratory data analysis}
 \description{This function provides descriptive statistics for the pooled sample and the samples of positive, negative individuals and those whose condition is unknown.}
-\usage{explore(marker, status, observed.time, left, right, time, d, ...)}
+\usage{explore_table(marker, status, observed.time, left, right, time, d, ...)}
 \arguments{
   \item{marker}{vector with the biomarker values. It is a mandatory parameter.}
 
@@ -27,11 +27,11 @@
 }
 
 \seealso{
-\code{\link{explore.plot}}
+\code{explore_plot}
 }
 
 \examples{
 data(diabet)
-explore(marker=diabet$stab.glu, status=diabet$diab)
+explore_table(marker=diabet$stab.glu, status=diabet$diab)
 }
 

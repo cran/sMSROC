@@ -1,12 +1,12 @@
-\name{check.conf.int-internal}
-\alias{check.conf.int}
+\name{check_conf_int-internal}
+\alias{check_conf_int}
 \title{Checks for parameters to compute the confidence intervals for the AUC}
 \description{Check of the consistency of the parameters indicated to compute the confidence intervals for the AUC.}
-\usage{check.conf.int(conf.int, ci.cl, ci.meth, ci.nboots, parallel, ncpus)}
+\usage{check_conf_int(conf.int, ci.cl, ci.meth, ci.nboots, parallel, ncpus)}
 \arguments{
   \item{conf.int}{parameter indicating whether confidence intervals for the AUC will be computed (\strong{``T''}) or not  (\strong{``F''}). The default is ``F''.}
   \item{ci.cl}{confidence level at which the confidence intervals for the AUC will be calculated. The default value is 0.95.}
-  \item{ci.meth}{method for computing the confidence intervals according to \doi{/10.1515/ijb-2019-0097}. There are three options:
+  \item{ci.meth}{method for computing the confidence intervals according to \doi{10.1515/ijb-2019-0097}. There are three options:
   \itemize{
   \item \strong{``E'',}{ for the \bold{E}mpirical variance estimation.}
   \item \strong{``V'',}{ for the theoretical \bold{V}ariance estimation.}

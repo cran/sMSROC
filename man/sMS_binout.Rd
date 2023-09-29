@@ -1,8 +1,8 @@
-\name{sMS.binout-internal}
-\alias{sMS.binout}
+\name{sMS_binout-internal}
+\alias{sMS_binout}
 \title{sMS estimator for diagnostic biomarkers}
 \description{Wrap function for computing the sMS estimator in diagnosis scenarios.}
-\usage{sMS.binout(marker, status, meth, grid, probs, all)}
+\usage{sMS_binout(marker, status, meth, grid, probs, all)}
 \arguments{
   \item{marker}{ vector with the biomarker values.}
   \item{status}{ numeric response vector.}
@@ -34,8 +34,8 @@
 \item{probs}{ vector with the probabilities of the predictive model corresponding to each biomarker value.}
 }
 \seealso{
-\code{pred.mod.emp}, \code{pred.mod.binout},
-\code{computeROC}, \code{sMS.timerc}, \code{sMS.timeic}
+\code{pred_mod_emp}, \code{pred_mod_binout},
+\code{computeROC}, \code{sMS_timerc} and \code{sMS_timeic}
 }
 
 

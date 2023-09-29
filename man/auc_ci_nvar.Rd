@@ -1,11 +1,11 @@
-\name{auc.ci.nvar-internal}
-\alias{auc.ci.nvar
+\name{auc_ci_nvar-internal}
+\alias{auc_ci_nvar
 }
 \title{Confidence intervals for the AUC (theoretical variance estimation)
 }
-\description{Computation of confidence intervals for the AUC by implementing the theoretical procedure for estimating the variance of the AUC, as described in  \doi{/10.1515/ijb-2019-0097}.
+\description{Computation of confidence intervals for the AUC by implementing the theoretical procedure for estimating the variance of the AUC, as described in  \doi{10.1515/ijb-2019-0097}.
 }
-\usage{auc.ci.nvar(marker, outcome, status, observed.time, left, right, time,
+\usage{auc_ci_nvar(marker, outcome, status, observed.time, left, right, time,
                     meth, data_type, grid, probs, sd.probs, ci.cl, nboots,
                     SE, SP, auc, parallel, ncpus, all)
 }
