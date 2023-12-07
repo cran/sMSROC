@@ -98,6 +98,11 @@ pred_model_timeic <- function(marker, left, right, outcome, time, meth){
    new <- data.frame(marker = c(as.numeric(marker)))
    row.names(new) <- sapply(1:length(marker), function(i){paste0("grp",i)})
    SurvCurves     <- getSCurves(mod,new)
+   for (i in (1:length(SurvCurves$S_curves))){
+      l <- length(SurvCurves$S_curves[[i]])
+      last <- SurvCurves$S_curves[[i]][l]
+      SurvCurves$S_curves[[i]][l] <- ifelse (is.nan(last), 0, last)
+   }
    if (meth == "L"){
       PR <- sapply(1:length(marker), fuA, time, SurvCurves$Tbull_ints, SurvCurves$S_curves, left, right)
    } else{

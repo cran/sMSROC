@@ -12,18 +12,16 @@
 \item{time}{point of time at which the sMS ROC curve estimator will be computed.}
 \item{meth}{method for approximating the predictive model \eqn{P(D|X=x)}. The options are:
 \itemize{
-\item{\bold{``L'',}} {for proportional hazards regression models (see Details).}
-\item{\bold{``S'',}} {for smooth models (see Details).}
+\item \bold{``L'',} for proportional hazards regression models (see Details).
+\item \bold{``S'',} for smooth models (see Details).
 }}
 }
 
 \details{
 \itemize{
-\item{If \code{meth} = \bold{``L''}, the event times are assumed to come from a Cox proportional hazards regression model:
- \deqn{ P (T \leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ \beta_0 + \beta_1 \cdot \log(x)\}\},} where \eqn{\Delta_0(\cdot)} is the baseline hazard function and \eqn{\beta_0, \beta_1 \in {\cal R}}.}
-
-\item{If \code{meth} = \bold{``S''}, the approximation is done by \deqn{P (T\leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ s(x)\}\} } being \eqn{s(\cdot)} the smooth function (penalized splines, \doi{10.1111/1467-9868.00125}).}
-}
+\item If \code{meth} = \bold{``L''}, the event times are assumed to come from a Cox proportional hazards regression model:
+ \deqn{ P (T \leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ \beta_0 + \beta_1 \cdot \log(x)\}\},} where \eqn{\Delta_0(\cdot)} is the baseline hazard function and \eqn{\beta_0, \beta_1 \in {\cal R}}.
+\item If \code{meth} = \bold{``S''}, the approximation is done by \deqn{P (T\leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ s(x)\}\} } being \eqn{s(\cdot)} the smooth function (penalized splines, \doi{10.1111/1467-9868.00125}).}
 }
 \value{The returned value is a list with three components:
 \item{marker}{vector containing the ordered marker values.}

@@ -23,13 +23,13 @@ sMSROC(marker, status, observed.time, left, right, time,
   \item{meth}{ method for approximating the predictive model \eqn{P(D|X=x)}. There are several options available:
 
 \itemize{
-\item{\strong{``E'',}} {allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
+\item \bold{``E'',} allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
+
+\item \bold{``L'',} for \bold{L}inear logistic regression and proportional hazards regression models (see Details).
+
+\item \bold{``S'',} for \bold{S}mooth models (see Details).
 }
-
-\item{\bold{``L'',}} {for \bold{L}inear logistic regression and proportional hazards regression models (see Details).}
-
-\item{\bold{``S'',}} {for \bold{S}mooth models (see Details).}
-}}
+}
 
   \item{probs}{ vector containing the probabilities corresponding to the predictive model when it has been externally computed. Only values within [0,1] are admissible.}
 
@@ -40,15 +40,16 @@ sMSROC(marker, status, observed.time, left, right, time,
 
   \item{ci.cl}{confidence level at which the confidence interval for the AUC will be provided. The default value is 95\%. This parameter is ignored when \code{conf.int} is set to \bold{``F''}.
   }
-\item{ci.meth}{method for computing the confidence interval for the AUC. There are three options:\itemize{
-   \item \bold{``E'',} for the \bold{E}mpirical variance estimation.
-   \item \bold{``V'',} for the theoretical \bold{V}ariance estimation.
-   \item \bold{``B'',} for the \bold{B}ootstrap percentile approximation.}
+\item{ci.meth}{method for computing the confidence interval for the AUC. There are three options:
+\itemize{
+   \item \bold{``E''}, for the \bold{E}mpirical variance estimation.
+   \item \bold{``V''}, for the theoretical \bold{V}ariance estimation.
+   \item \bold{``B''}, for the \bold{B}ootstrap percentile approximation.
 
   The empirical method \bold{E} is taken as default value and the parameter is ignored too when \code{ci.cl} value is \bold{``F''}.
 }
- \item{ci.nboots}{number of boostrap samples to be run when \bold{B}oostrap is set as \code{ci.meth} parameter. The default value is 500 and it is not taken into account when no confidence interval is computed.
- }
+}
+\item{ci.nboots}{number of boostrap samples to be run when \bold{B}oostrap is set as \code{ci.meth} parameter. The default value is 500 and it is not taken into account when no confidence interval is computed.}
 \item{parallel}{indicates whether parallel computing will be done (\bold{``T''}) or not (\bold{``F''}) when computing the variance of the AUC through the methods \bold{``V''} and \bold{``B''}.
 }
 \item{ncpus}{number of CPUS that will be used when parallel computing is chosen. The default value is 1 and the maximum is 2.
@@ -65,24 +66,21 @@ The predictive model \eqn{P(D|X=x)} depicts the relationship between the biomark
 
 For \bold{diagnosis} scenarios:
 \itemize{
-\item{If \code{meth} = \bold{``L''}, the logit transformation of the predicitive model is approximated by a linear logistic regression model:
+\item If \code{meth} = \bold{``L''}, the logit transformation of the predicitive model is approximated by a linear logistic regression model:
 \deqn{P (D|X=x) = 1/(1 + \exp{- \{ \beta_0 + \beta_1 x \}),}}
-with \eqn{\beta_0, \beta_1 \in {\cal R}}.}
-
-\item{If \code{meth} = \bold{``S''}, the logit transformation of the predicitive model is estimated by the smooth logistic regression,
+with \eqn{\beta_0, \beta_1 \in {\cal R}}.
+\item If \code{meth} = \bold{``S''}, the logit transformation of the predicitive model is estimated by the smooth logistic regression,
 \deqn{ P(D | X=x) = 1 / ( 1 + \exp \{ - s(x) \}),} being \eqn{s(\cdot)} the smooth function (splines, \doi{10.1002/sim.4780080504}).
-}
 }
 
 Notice that the predictive model allows to compute the probability of being positive/negative even when the actual belonging group is unknown.
 
 For \bold{prognosis} scenarios and right censorship:
 \itemize{
-\item{If \code{meth} = \bold{``L''}, the event times are assumed to come from a Cox proportional hazards regression model:
- \deqn{ P (T \leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ \beta_0 + \beta_1 \cdot \log(x)\}\},} where \eqn{\Delta_0(\cdot)} is the baseline hazard function and \eqn{\beta_0, \beta_1 \in {\cal R}}.}
+\item If \code{meth} = \bold{``L''}, the event times are assumed to come from a Cox proportional hazards regression model:
+ \deqn{ P (T \leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ \beta_0 + \beta_1 \cdot \log(x)\}\},} where \eqn{\Delta_0(\cdot)} is the baseline hazard function and \eqn{\beta_0, \beta_1 \in {\cal R}}.
 
-\item{If \code{meth} = \bold{``S''}, the approximation is done by \deqn{P (T\leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ s(x)\}\} } being \eqn{s(\cdot)} the smooth function (penalized splines, \doi{10.1111/1467-9868.00125}).}
-}
+\item If \code{meth} = \bold{``S''}, the approximation is done by \deqn{P (T\leq t \;|\; X=x) = 1 - \exp \{ - \Delta_0(t) \cdot \exp \{ s(x)\}\} } being \eqn{s(\cdot)} the smooth function (penalized splines, \doi{10.1111/1467-9868.00125}).}
 
 Finally, for \bold{prognosis} scenarios and interval censorship:
 \itemize{
@@ -114,19 +112,18 @@ procedure and when the chosen option is \bold{"V"}, the theoretical approximatio
 \item{time}{point of time at which the sMS ROC curve estimator was computed in prognosis scenarios.}
 \item{data}{list contaning several parameters used in the internal functions, when applicable:
 \itemize{
-\item{data_type}{ - type of scenario handled (diagnosis/prognosis, under right or interval censorship).
-}
-\item{grid}{ grid size.}
-\item{marker} { - vector with the biomarker values.}
-\item{outcome} { - vector with the condition of the individuals at time \code{time} as positive, negative or unknown.}
-\item{ncpus}{ - CPUs used if parallel computing was performed.}
-\item{ci.nboots} { - number of bootstrap samples generated for computing the confidence intervals for the AUC.}
-\item{parallel} { - was parallel computing performed?}
-\item{meth} { - method used to compute the predictive model.}
-\item{status} { - response vector.}
-\item{observed.time} { - vector with the observed times for each subject.}
-\item{left} { - vector with the lower edges of the observed intervals.}
-\item{right} { - vector with the upper edges of the observed intervals.}
+\item data_type - type of scenario handled (diagnosis/prognosis, under right or interval censorship).
+\item grid - grid size.
+\item marker - vector with the biomarker values.
+\item outcome  - vector with the condition of the individuals at time \code{time} as positive, negative or unknown.
+\item ncpus - CPUs used if parallel computing was performed.
+\item ci.nboots - number of bootstrap samples generated for computing the confidence intervals for the AUC.
+\item parallel - was parallel computing performed?
+\item meth - method used to compute the predictive model.
+\item status - response vector.
+\item observed.time - vector with the observed times for each subject.
+\item left - vector with the lower edges of the observed intervals.
+\item right - vector with the upper edges of the observed intervals.
 }
 }
 \item{message}{table containing the warning messages generated during the execution of the function.}

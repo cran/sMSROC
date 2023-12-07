@@ -8,11 +8,10 @@
   \item{status}{ numeric response vector.}
   \item{meth}{ method for approximating the predictive model \eqn{P(D|X=x)}.
 \itemize{
-\item{\strong{``E'',}} {allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.}
-\item{\strong{``L'',}} {for \bold{L}inear logistic regression models (see details in \code{\link{sMSROC}}).
-}
-\item{\strong{``S'',}} {for \bold{S}mooth models (see details \code{\link{sMSROC}}).}
-}
+\item \bold{``E'',} allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
+\item \bold{``L'',} for \bold{L}inear logistic regression models (see details in \code{\link{sMSROC}}).
+
+\item \bold{``S'',} for \bold{S}mooth models (see details \code{\link{sMSROC}}).}
 }
 \item{grid}{ grid size.
   }

@@ -11,12 +11,9 @@
   \item{time}{point of time at which the sMSROC curve estimator will be computed.}
   \item{meth}{method for approximating the predictive model \eqn{P(D|X=x)}.
 \itemize{
-\item{\strong{``E'',}}{allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
-}
-\item{\bold{``L'',}}{for proportional hazards regression models taking into account the observation intervals (see Details \code{\link{sMSROC}}).
-}
-\item{\bold{``S'',}}{for proportional hazards regression models \bold{without} taking into account the observation intervals (see Details \code{\link{sMSROC}}).
-}
+\item \bold{``E'',} allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
+\item \bold{``L'',} for proportional hazards regression models taking into account the observation intervals (see Details \code{\link{sMSROC}}).
+\item \bold{``S'',} for proportional hazards regression models \bold{without} taking into account the observation intervals (see Details \code{\link{sMSROC}}).
 }
 }
   \item{grid}{grid size.}

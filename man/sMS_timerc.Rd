@@ -2,7 +2,8 @@
 \alias{sMS_timerc}
 \title{sMS estimator for prognostic biomarkers and right censorship}
 \description{Wrap function for computing the sMS estimator in prognosis scenarios under right censorship.}
-\usage{sMS_timerc(marker, status, observed.time, outcome, time, meth, grid, probs, all)}
+\usage{sMS_timerc(marker, status, observed.time, outcome, time,
+           meth, grid, probs, all)}
 \arguments{
   \item{marker}{vector with the biomarker values.}
   \item{status}{numeric response vector.}
@@ -11,12 +12,9 @@
   \item{time}{point of time at which the sMSROC curve estimator will be computed.}
   \item{meth}{ method for approximating the predictive model \eqn{P(D|X=x)}.
 \itemize{
-\item{\strong{``E'',}} {allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
-}
-\item{\strong{``L'',}} {for \bold{L}inear proportional hazards regression models (see details in \code{\link{sMSROC}}).
-}
-\item{\strong{``S'',}} {for \bold{S}mooth models (see details in \code{\link{sMSROC}}).
-}
+\item \bold{``E'',} allocates to each individual their own condition as positive or negative. Those whose condition is unknown at time \code{time} are dismissed.
+\item \bold{``L'',} for \bold{L}inear proportional hazards regression models (see details in \code{\link{sMSROC}}).
+\item \bold{``S'',} for \bold{S}mooth models (see details in \code{\link{sMSROC}}).
 }
 }
 \item{grid}{grid size.

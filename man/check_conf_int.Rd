@@ -8,9 +8,9 @@
   \item{ci.cl}{confidence level at which the confidence intervals for the AUC will be calculated. The default value is 0.95.}
   \item{ci.meth}{method for computing the confidence intervals according to \doi{10.1515/ijb-2019-0097}. There are three options:
   \itemize{
-  \item \strong{``E'',}{ for the \bold{E}mpirical variance estimation.}
-  \item \strong{``V'',}{ for the theoretical \bold{V}ariance estimation.}
-  \item \strong{``B'',}{ for the \bold{B}ootstrap Percentile.}
+  \item \bold{``E''}, for the \bold{E}mpirical variance estimation.
+  \item \bold{``V''}, for the theoretical \bold{V}ariance estimation.
+  \item \bold{``B''}, for the \bold{B}ootstrap Percentile.
    }
 The empirical method \bold{E} is taken as default. This parameter is ignored if \code{conf.int} is set to ``F''.
 }

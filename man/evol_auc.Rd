@@ -24,11 +24,11 @@ Plots, in prognosis scenarios, the areas under the ROC curves computed by the sM
   \item{meth}{method for approximating the predictive model \eqn{P(D|X=x)}. There are several options available:
 
 \itemize{
-\item{\bold{``E'',}}{allocates to each individual their own status value as having the event of interest or not. Those with missing status values or censored at a fixed point of time \bold{t} are dismissed.}
+\item \bold{``E'',} allocates to each individual their own status value as having the event of interest or not. Those with missing status values or censored at a fixed point of time \bold{t} are dismissed.
 
-\item{\bold{``L'',}}{for proportional hazards regression models.}
+\item \bold{``L'',} for proportional hazards regression models.
 
-\item{\bold{``S'',}}{for smooth models.}
+\item \bold{``S'',} for smooth models.
 }
 }
 \item{grid}{grid size for computing the AUC. Default value 500.
@@ -37,7 +37,7 @@ Plots, in prognosis scenarios, the areas under the ROC curves computed by the sM
 \details{
 This function calls the {\code{\link{sMSROC}}} function at each of the times indicated in the vector \code{time}, and the AUC is computed according to the parameters indicated.
 }
-\value{A list with the follwing components:
+\value{A list with the following components:
 \item{evol.auc}{object of class \code{\link{ggplot}}. A graphic line plotting the AUCs at the considered times.}
 \item{time}{vector with the ordered values of the \code{time} entered as parameter.}
 \item{auc}{vector with the values of the AUCs computed at the times indicated at the \code{time} parameter.}

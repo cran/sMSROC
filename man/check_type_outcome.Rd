@@ -20,10 +20,10 @@ Determines the type of scenario handled: diagnosis or prognosis, under right or 
 A list with a single component:
 \item{type.outcome}{ string of length 6 with the following values:
 \itemize{
-  \item{\strong{"binout",}}{ in the case of diagnosis scenarios.}
-  \item{\strong{"timerc",}}{ for prognosis scenarios and right censorship.}
-  \item{\strong{"timeic",}}{ for prognosis scenarios and interval censorship.}
-  \item{\strong{"unknow",}}{ if it is not possible to determine the type of scenario.}
+  \item \bold{"binout"}, in the case of diagnosis scenarios.
+  \item \bold{"timerc"}, for prognosis scenarios and right censorship.
+  \item \bold{"timeic"}, for prognosis scenarios and interval censorship.
+  \item \bold{"unknow"}, if it is not possible to determine the type of scenario.
   }
 }
 }
